@@ -17,7 +17,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "node --experimental-strip-types src/cli.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "link": "npm run build && ln -sf \"$PWD/bin/skillmaker.mjs\" \"$HOME/.local/bin/skillmaker\" && echo 'skillmaker -> ~/.local/bin/skillmaker'",
+    "unlink": "rm -f \"$HOME/.local/bin/skillmaker\""
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

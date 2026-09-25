@@ -7,8 +7,16 @@ command opens a TUI where **Tab** switches between Generate, Chat and Settings.
 ```bash
 npm install
 npm run build
-node bin/skillmaker.mjs
+npm run link          # symlink `skillmaker` into ~/.local/bin
+skillmaker            # one command, from anywhere
 ```
+
+`npm run link` puts a symlink in `~/.local/bin` rather than using `npm link`,
+because the global npm prefix here (`/usr`) needs root. `npm run unlink` removes
+it. Without linking, run it in place: `node bin/skillmaker.mjs`.
+
+On the first run the Settings tab opens automatically because nothing is
+configured yet — enter a base URL, an API key and pick a model.
 
 ## Commands
 
