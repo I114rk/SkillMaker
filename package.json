@@ -1,0 +1,36 @@
+{
+  "name": "skillmaker",
+  "version": "0.1.0",
+  "description": "Generate Claude Code Agent Skills from a description, and chat with an Anthropic-compatible API",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "skillmaker": "bin/skillmaker.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --experimental-strip-types src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "@clack/prompts": "^1.8.1",
+    "ink": "^7.1.1",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.3.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "typescript": "^5.9.0"
+  }
+}
